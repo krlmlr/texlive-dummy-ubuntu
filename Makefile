@@ -7,6 +7,7 @@ ARCH_DIRS=$(patsubst %,%.arch,$(ARCHS))
 all: $(ARCH_DIRS)
 
 %.arch: FORCE
+	rm -rf $@ && \
 	mkdir -p $@ && \
 	cd $@ && \
 	rm -f *.upload && \
