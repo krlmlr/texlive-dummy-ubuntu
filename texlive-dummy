@@ -7,7 +7,7 @@ Priority: optional
 Standards-Version: 3.9.2
 
 Package: texlive-dummy
-Version: 2012.3~1
+Version: 2012.3~2
 Maintainer: Kirill Müller <mail@kirill-mueller.de>
 Provides: biblatex, biblatex-dw, cm-super, cm-super-minimal, context, dvipng,
  feynmf, fragmaster, lacheck, latex-beamer, latex-cjk-all, latex-cjk-chinese,
@@ -52,6 +52,7 @@ Provides: biblatex, biblatex-dw, cm-super, cm-super-minimal, context, dvipng,
  ttf-gfs-porson, ttf-gfs-solomos, ttf-gfs-theokritos, ttf-sil-gentium, xindy,
  xindy-rules
 Architecture: all
-Description: All packages that correspond to a local installation of TeX Live
+Description: Dummy package for TeXlive 2012
+ Provides all packages that correspond to a local installation of TeXlive
  2012 using scheme-full. See also http://tug.org/texlive/debian#vanilla.
 
