@@ -9,6 +9,7 @@ all: $(ARCH_DIRS)
 %.arch: FORCE
 	mkdir -p $@ && \
 	cd $@ && \
+	rm -f *.upload && \
 	equivs-build --full ../$(PACKAGE_DEF) && \
 	rm *.changes && \
 	dpkg-source -x *.dsc && \
