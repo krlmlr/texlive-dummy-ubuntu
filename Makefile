@@ -1,5 +1,5 @@
 PACKAGE_DEF=texlive-dummy
-PPA=ppa:mail-kirill-mueller/ppa
+PPA=ppa:krlmlr/ppa
 
 ARCHS=all
 ARCH_DIRS=$(patsubst %,%.arch,$(ARCHS))
