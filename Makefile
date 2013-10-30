@@ -7,6 +7,7 @@ ARCH_DIRS=$(patsubst %,%.arch,$(ARCHS))
 all: $(ARCH_DIRS)
 
 %.arch: FORCE
+	if [ "$(PWD)" != "$(firstword $(PWD))" ]; then echo "ERROR: Please use from within a directory that does not contain spaces"; exit 1; fi; \
 	rm -rf $@ && \
 	mkdir -p $@ && \
 	cd $@ && \
