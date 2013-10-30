@@ -1,5 +1,6 @@
 PACKAGE_DEF=texlive-dummy
 PPA=ppa:krlmlr/ppa
+RELEASE=raring
 
 ARCHS=all
 ARCH_DIRS=$(patsubst %,%.arch,$(ARCHS))
@@ -17,7 +18,7 @@ all: $(ARCH_DIRS)
 	dpkg-source -x *.dsc && \
 	cd $$(find * -maxdepth 0 -type d) && \
 	pwd && \
-	sed -i 's/unstable/raring/' debian/changelog && \
+	sed -i "s/unstable/$(RELEASE)/" debian/changelog && \
 	debuild -S
 
 upload:
