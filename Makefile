@@ -1,3 +1,4 @@
+SHELL=/bin/bash
 PACKAGE_DEF=texlive-dummy
 PPA=ppa:krlmlr/ppa
 RELEASE=raring
@@ -8,7 +9,7 @@ ARCH_DIRS=$(patsubst %,%.arch,$(ARCHS))
 all: $(ARCH_DIRS)
 
 %.arch: FORCE
-	if [ "$(PWD)" != "$(firstword $(PWD))" ]; then echo "ERROR: Please use from within a directory that does not contain spaces"; exit 1; fi; \
+	if [ "$(PWD)" != "$$(printf '%q' "$$(pwd)")" ]; then echo "ERROR: Please use from a dir whose path has no special characters"; exit 1; fi; \
 	rm -rf $@ && \
 	mkdir -p $@ && \
 	cd $@ && \
