@@ -7,10 +7,11 @@ Priority: optional
 Standards-Version: 3.9.2
 
 Package: texlive-dummy
-Version: 2012.3~2
+Version: 2012.3~3
 Maintainer: Kirill Müller <mail@kirill-mueller.de>
 Depends: tex-common, texinfo, lmodern
 Provides:
+ asymptote,
  biblatex,
  biblatex-dw,
  cm-super,
